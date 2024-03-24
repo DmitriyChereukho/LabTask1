@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5072149476444928694}
-  - component: {fileID: 4456176217840570208}
+  - component: {fileID: 1117315090185046510}
   m_Layer: 0
   m_Name: ResourceCounter
   m_TagString: Untagged
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4456176217840570208
+--- !u!114 &1117315090185046510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
