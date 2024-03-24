@@ -21,7 +21,7 @@ namespace _Source.Game.Scripts
         private GameObject _counterIncreaseButtonPrefab;
 
 
-        public void Init(ResourceBank resourceBank, GameResource resource)
+        public void Init(ResourceBank resourceBank, ProductionLevels productionLevels, GameResource resource)
         {
             _resourceBank = resourceBank;
             _resource = resource;
@@ -35,7 +35,7 @@ namespace _Source.Game.Scripts
             gameObject.name = resource + "Counter";
 
             GameObject button = Instantiate(_counterIncreaseButtonPrefab, transform);
-            button.GetComponent<ProductionBuilding>().Init(_resourceBank, resource, _icon);
+            button.GetComponent<ProductionBuilding>().Init(_resourceBank, resource, _icon, productionLevels);
         }
 
         private void OnResourceValueChanged(int value)
