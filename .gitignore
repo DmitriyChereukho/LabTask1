@@ -137,8 +137,7 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
-# Copilot
-.idea/.idea.LabTask1/.idea/copilot
+.idea
 
 # Builds
 *.apk
