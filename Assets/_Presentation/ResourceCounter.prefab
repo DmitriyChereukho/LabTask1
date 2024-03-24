@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _valueText: {fileID: 4774469333674282805}
   _icon: {fileID: 4097186614827659196}
+  _counterIncreaseButtonPrefab: {fileID: 8342361367843041919, guid: e0be4b33136cf6a42b854cde99cf6af1, type: 3}
 --- !u!1 &5907728835968746448
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

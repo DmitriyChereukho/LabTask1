@@ -14,7 +14,7 @@ namespace _Source.Core.Scripts
 
     public class ResourceBank
     {
-        private Dictionary<GameResource, ObservableInt> _resources =
+        private readonly Dictionary<GameResource, ObservableInt> _resources =
             new Dictionary<GameResource, ObservableInt>();
 
         public ResourceBank() {
