@@ -1,7 +1,7 @@
 using _Source.Core.Scripts;
 using UnityEngine;
 
-namespace _Source.Game
+namespace _Source.Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {

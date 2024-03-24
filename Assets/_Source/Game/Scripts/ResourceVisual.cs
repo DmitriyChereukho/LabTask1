@@ -1,13 +1,12 @@
 using _Source.Core.Scripts;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
 
-namespace _Source.Game
+namespace _Source.Game.Scripts
 {
     public class ResourceVisual : MonoBehaviour
     { 
-        [SerializeField]
         private GameResource _resource;
         
         [SerializeField]
@@ -15,10 +14,17 @@ namespace _Source.Game
         
         private ResourceBank _resourceBank;
         
-        public void Init(ResourceBank resourceBank)
+        [SerializeField]
+        private Image _icon;
+        
+        public void Init(ResourceBank resourceBank, GameResource resource)
         {
             _resourceBank = resourceBank;
             _resourceBank.GetResource(_resource).OnValueChanged += OnResourceValueChanged;
+            
+            _icon.sprite = Resources.Load<Sprite>($"Icons/{resource}");
+            _valueText.text = $"{resource}\n{_resourceBank.GetResource(resource).Value}";
+            gameObject.name = resource + "Counter";
         }
 
         private void OnResourceValueChanged(int value)
