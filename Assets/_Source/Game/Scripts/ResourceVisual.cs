@@ -29,11 +29,13 @@ namespace _Source.Game.Scripts
             _resourceBank.GetResource(_resource).OnValueChanged += OnResourceValueChanged;
 
             _icon.sprite = Resources.Load<Sprite>($"Icons/{resource}");
+            _icon.fillMethod = Image.FillMethod.Horizontal;
+            
             _valueText.text = $"{resource}\n{_resourceBank.GetResource(resource).Value}";
             gameObject.name = resource + "Counter";
 
             GameObject button = Instantiate(_counterIncreaseButtonPrefab, transform);
-            button.GetComponent<ProductionBuilding>().Init(_resourceBank, resource);
+            button.GetComponent<ProductionBuilding>().Init(_resourceBank, resource, _icon);
         }
 
         private void OnResourceValueChanged(int value)
